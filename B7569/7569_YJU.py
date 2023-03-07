@@ -14,12 +14,9 @@ while visit:
         nx = x + dx
         ny = y + dy
         nz = z + dz
-        try:
-            if not matrix[nx][ny][nz]:
-                matrix[nx][ny][nz] = matrix[x][y][z] + 1
-                visit.append((nx,ny,nz))
-        except IndexError:
-            continue
+        if -1<nx<h and -1<ny<m and -1<nz<n and not matrix[nx][ny][nz]:
+            matrix[nx][ny][nz] = matrix[x][y][z] + 1
+            visit.append((nx,ny,nz))
 answer = 0
 check = 0
 for i in range(h):
