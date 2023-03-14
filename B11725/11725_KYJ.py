@@ -1,6 +1,5 @@
 import sys
 from collections import deque
-sys.stdin = open('input.txt')
 
 '''
 [1] 인접 노드 2차원 리스트 정리
